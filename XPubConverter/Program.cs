@@ -9,11 +9,13 @@ namespace XPubConverter {
             Console.WriteLine("Hello World!");
 
             string electrumTestYPub = "vpub5VLSyqLKYmnnQM2KPtJQ4cFxaEEarLyDdbvAPZCMT8LvNqMQnuQAXrFPrxQ7s4fMe9gtvpYkdRvLpZRAHUq9B87komwhX7bXrSMmXz7n8iV";
-            Console.WriteLine("Original: " + electrumTestYPub);
+            Console.WriteLine("Orig: " + electrumTestYPub);
+            Console.WriteLine("");
+
             //Result taken from https://jlopp.github.io/xpub-converter/
             string expectedResult = "xpub68zybAg9r8sk6wQZ4bseUnSxvAXUjaxDTpxbxLz8D96gV2ysJDjHmyZfuNKHrsyCTRvWRmjsYkdSb8eHisfAmbUxYTLYgwEWPtV4K85ch6v";
-            Console.WriteLine("Expected Result: " + expectedResult);
-            Console.WriteLine("  Actual Result: " + ChangeVersionBytes(electrumTestYPub, "xpub"));
+            Console.WriteLine("Correct: " + expectedResult);
+            Console.WriteLine("  Wrong: " + ChangeVersionBytes(electrumTestYPub, "xpub"));
             Console.WriteLine("");
             Console.WriteLine("Last 5 characters are different, checksum?");
         }
